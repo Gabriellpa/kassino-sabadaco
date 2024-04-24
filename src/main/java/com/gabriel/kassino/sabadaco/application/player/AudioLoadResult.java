@@ -23,7 +23,7 @@ public class AudioLoadResult implements AudioLoadResultHandler {
 
     @Override
     public void trackLoaded(AudioTrack track) {
-        sendMessageToChannel("Adding to queue " + track.getInfo().title);
+        sendMessageToChannel("Foi pra fila: " + track.getInfo().title);
         play(event.getGuild().block(), musicManager, track);
     }
 
@@ -41,13 +41,13 @@ public class AudioLoadResult implements AudioLoadResultHandler {
 
     @Override
     public void noMatches() {
-        sendMessageToChannel("Nothing found");
+        sendMessageToChannel("Não achei isso aí meu");
     }
 
     @Override
     public void loadFailed(FriendlyException exception) {
         log.info("failed -> {}", exception.getMessage());
-        sendMessageToChannel("Could not play: " + exception.getMessage());
+        sendMessageToChannel("Bah, não rolou: " + exception.getMessage());
     }
 
     private void play(Guild guild, GuildAudioManager musicManager, AudioTrack track) {

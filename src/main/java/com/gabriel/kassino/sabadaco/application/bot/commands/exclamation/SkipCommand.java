@@ -16,7 +16,7 @@ public class SkipCommand implements ExclamationCommand{
 
     @Override
     public String getName() {
-        return "!skup";
+        return "!skip";
     }
 
     @Override

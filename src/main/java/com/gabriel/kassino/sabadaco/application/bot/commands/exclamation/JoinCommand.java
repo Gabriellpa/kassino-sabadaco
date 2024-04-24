@@ -35,6 +35,7 @@ public class JoinCommand implements ExclamationCommand {
                 .flatMap(VoiceState::getChannel)
                 // join returns a VoiceConnection which would be required if we were
                 // adding disconnection features, but for now we are just ignoring it.
+                // disconnection added!
                 .flatMap(channel -> channel.join(spec -> spec.setProvider(manager.getProvider())))
                 .then();
     }

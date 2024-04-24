@@ -41,3 +41,4 @@ out/
 
 ### new relic plugin ###
 newrelic
+/compose.yaml

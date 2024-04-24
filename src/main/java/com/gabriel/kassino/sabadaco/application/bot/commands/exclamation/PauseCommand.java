@@ -16,7 +16,7 @@ public class PauseCommand implements ExclamationCommand{
 
     @Override
     public String getName() {
-        return "!puose";
+        return "!pause";
     }
 
     @Override
