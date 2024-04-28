@@ -15,8 +15,8 @@ public class LeaveCommand implements  ExclamationCommand{
 
         return Mono.just(event.getMessage())
                 .flatMap(Message::getChannel)
-                .flatMap(channel -> channel.createMessage(this.getCommandDisconnect(event))
-                        .then());
+                .flatMap(channel -> channel.createMessage(this.getCommandDisconnect(event)))
+                .then();
     }
 
     @Override
